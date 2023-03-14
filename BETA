@@ -13,7 +13,7 @@ local response = syn.request(
         Headers = {
             ['Content-Type'] = 'application/json'
         },
-        Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key .. \n"HWID: "..hwid})
+        Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key .. "HWID: "..hwid})
     }
 );
 
