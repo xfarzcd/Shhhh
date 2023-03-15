@@ -14,7 +14,7 @@ local response = syn.request(
             ['Content-Type'] = 'application/json'
         },
         Body = game:GetService('HttpService'):JSONEncode({content = "Script Key: " ..script_key.. "PERSON ".. http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                   tostring(game:GetService("Players").LocalPlayer.Name).. "IP: "..ip.."*")
+                   tostring(game:GetService("Players").LocalPlayer.Name).."*")
     }
 );
 
